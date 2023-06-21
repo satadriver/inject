@@ -23,6 +23,15 @@ add_library( # Sets the name of the library.
         # Provides a relative path to your source file(s).
         injected.c)
 
+add_library( # Sets the name of the library.
+        loadApk
+
+        # Sets the library as a shared library.
+        SHARED
+
+        # Provides a relative path to your source file(s).
+        loadApk.cpp)
+
 add_executable( # Sets the name of the library.
         target64
 
@@ -67,6 +76,13 @@ target_link_libraries( # Specifies the target library.
 
 target_link_libraries( # Specifies the target library.
         target64
+
+        # Links the target library to the log library
+        # included in the NDK.
+        ${log-lib})
+
+target_link_libraries( # Specifies the target library.
+        loadApk
 
         # Links the target library to the log library
         # included in the NDK.

@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Used to load the 'inject64' library on application startup.
     static {
-        System.loadLibrary("inject64");
+        System.loadLibrary("loadApk");
     }
 
     private ActivityMainBinding binding;
